@@ -63,7 +63,14 @@ const {
 
 
 const email = getInput(1);
-const password = getInput(2);
+let password = getInput(2);
+
+if (getInput(3) !== undefined){
+   password = password + " " + getInput(3)
+}
+if (getInput(4) !== undefined){
+   password = password + " " + getInput(4)
+}
 
 if (isRegisteredUser(email)) {
   if (passwordMatches(email, password)) {
