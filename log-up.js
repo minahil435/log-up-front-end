@@ -60,3 +60,34 @@ const {
 
 // Being sure to do all that's outlined above, write
 // your code below!
+
+
+const email = getInput(1);
+const password = getInput(2);
+
+if (isRegisteredUser(email)) {
+  if (passwordMatches(email, password)) {
+    console.log("You are logged in.");
+  }
+  else {
+    console.log("Password is incorrect");
+  }
+}
+else if (isValidPassword(password)) {
+  if (isValidEmail(email)) {
+    console.log("signed up.")
+  }
+  else  {
+    console.log("Email is not valid. The email id must ends with @codeimmersives.com and it should have at least one character before that.");
+  }
+}
+else{
+  if ((isValidPassword(password))) 
+  {
+    console.log("Email is not valid. The email id must ends with @codeimmersives.com and it should have at least one character before that.");
+  }
+  console.log("Password is not valid. There should be at least 8 characters with a lower case and upper case letter");
+}
+
+
+
